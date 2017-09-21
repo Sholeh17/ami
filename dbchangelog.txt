@@ -1,0 +1,145 @@
+-- User Akses
+
+INSERT INTO `pms_rule_access_menu` (`id_seq`, `menu`, `controller`, `user_id`, `level`, `access_new`, `access_change`, `access_delete`, `access_approve`, `access_print`, `access_download`, `access_upload`, `access_sync`, `access_search`, `access_verify`) VALUES
+(530, 'Master', 'jabatan', 'administrator', 'Administrator', 'true', 'true', 'false', 'false', 'false', 'false', 'false', 'false', 'true', ''),
+(531, 'Master', 'karyawan', 'administrator', 'Administrator', 'true', 'true', 'false', 'false', 'false', 'false', 'false', 'false', 'true', ''),
+(532, 'Master', 'departemen', 'administrator', 'Administrator', 'true', 'true', 'false', 'false', 'false', 'false', 'false', 'false', 'true', ''),
+(533, 'Master Satuan', 'satuan', 'administrator', 'Administrator', 'true', 'true', 'false', 'false', 'false', 'false', 'false', 'false', 'true', '');
+
+
+--
+-- Table structure for table `isc_departemen`
+--
+
+CREATE TABLE IF NOT EXISTS `isc_departemen` (
+  `id_seq_departemen` int(11) NOT NULL AUTO_INCREMENT,
+  `name_departemen` varchar(50) NOT NULL,
+  `description_departemen` varchar(250) NOT NULL,
+  `date_insert_departemen` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `del_departemen` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_seq_departemen`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `isc_departemen`
+--
+
+INSERT INTO `isc_departemen` (`id_seq_departemen`, `name_departemen`, `description_departemen`, `date_insert_departemen`, `del_departemen`) VALUES
+(1, 'IT APPLICATION', 'INFORMATION TECHNOLOGY', '2014-02-17 09:11:31', 0),
+(2, 'BUSINESS CONTINUOUS IMPROVEMENT', 'CORPORATE PLANNING', '2014-02-18 14:09:14', 0),
+(3, 'MULTISTRADA LEARNING CENTER', 'MULTISTRADA LEARNING CENTER', '2014-02-18 14:09:31', 0),
+(4, 'IT OPERATION & SERVICE', 'INFORMATION TECHNOLOGY', '2014-02-18 14:36:58', 0),
+(5, 'BUSINESS SUPPORT ADMIN', 'BUSINESS SUPPORT ADMIN', '2014-02-19 08:23:07', 0),
+(6, 'ACCOUNTING & TAX', 'FINANCE & ACCOUNTING', '2014-02-19 08:24:06', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `isc_jabatan`
+--
+
+CREATE TABLE IF NOT EXISTS `isc_jabatan` (
+  `id_seq_jabatan` int(11) NOT NULL AUTO_INCREMENT,
+  `name_jabatan` varchar(50) NOT NULL,
+  `description_jabatan` varchar(250) NOT NULL,
+  `date_insert_jabatan` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `del_jabatan` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_seq_jabatan`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `isc_jabatan`
+--
+
+INSERT INTO `isc_jabatan` (`id_seq_jabatan`, `name_jabatan`, `description_jabatan`, `date_insert_jabatan`, `del_jabatan`) VALUES
+(1, 'DEPT. HEAD', 'DEPT. HEAD', '2014-02-14 13:51:03', 0),
+(2, 'SECTION HEAD', 'SECTION HEAD', '2014-02-14 13:55:02', 0),
+(3, 'OFFICER', 'OFFICER', '2014-02-17 08:27:39', 0),
+(4, 'STAFF', 'STAFF', '2014-02-17 08:27:51', 0),
+(5, 'FOREMAN', 'FOREMAN', '2014-02-18 14:38:35', 0),
+(6, 'OPERATOR', 'OPERATOR', '2014-02-19 08:28:01', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `isc_karyawan`
+--
+
+CREATE TABLE IF NOT EXISTS `isc_karyawan` (
+  `id_seq_karyawan` int(11) NOT NULL AUTO_INCREMENT,
+  `nik_karyawan` varchar(50) NOT NULL,
+  `name_karyawan` varchar(50) NOT NULL,
+  `id_jabatan` int(11) NOT NULL,
+  `id_departemen` int(11) DEFAULT NULL,
+  `name_atasan` varchar(250) NOT NULL,
+  `date_insert_karyawan` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `del_karyawan` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_seq_karyawan`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
+
+--
+-- Dumping data for table `isc_karyawan`
+--
+
+INSERT INTO `isc_karyawan` (`id_seq_karyawan`, `nik_karyawan`, `name_karyawan`, `id_jabatan`, `id_departemen`, `name_atasan`, `date_insert_karyawan`, `del_karyawan`) VALUES
+(1, '070900805', 'JULIUS LIMAN', 1, 1, 'UTHAN MOKHAMAD ARIEF', '2014-02-18 08:50:50', 0),
+(2, '080900980', 'MUH. YUDI MARDIA KUSUMA', 4, 1, '4', '2014-02-18 08:50:50', 0),
+(3, '080400868', 'SUFAJAR BUTSIANTO', 3, 1, '4', '2014-02-18 08:50:50', 0),
+(4, '080100858', 'HENDRA ENDIANDRA', 0, 0, 'JULIUS LIMAN', '2014-02-18 08:50:50', 0),
+(5, '110402411', 'TATANG SUMANTA', 4, 1, '17', '2014-02-18 08:50:50', 0),
+(6, '110802716', 'YUWONO', 4, 1, '17', '2014-02-18 08:50:50', 0),
+(7, '111102986', 'DAVE PRASTYA BUDI', 0, 0, 'SUTOYO', '2014-02-18 08:50:50', 0),
+(8, '111203010', 'NURMANSYAH', 0, 0, 'SUTOYO', '2014-02-18 08:50:50', 0),
+(9, '111203040', 'ZULFIKAR AJI WIBOWO', 4, 1, '17', '2014-02-18 08:50:50', 0),
+(10, '120503361', 'RISWANDI WARDOKO', 4, 1, '17', '2014-02-18 08:50:50', 0),
+(11, '120503362', 'RAMDAN NUR FAJRI', 0, 0, 'SUTOYO', '2014-02-18 08:50:50', 0),
+(12, '110102183', 'AVIP WAHYU ERLIANSYAH', 4, 1, 'SUTOYO', '2014-02-18 08:50:50', 0),
+(13, '100801955', 'STEVANUS', 4, 1, '17', '2014-02-18 08:50:50', 0),
+(14, '100801963', 'ADI RUSDIANA', 0, 0, 'SUTOYO', '2014-02-18 08:50:50', 0),
+(15, '071200842', 'ASEP PURNOMO YUDO', 0, 0, 'HENDRA ENDIANDRA', '2014-02-18 08:50:50', 0),
+(16, '931100075', 'HENDRA ATMADJA', 3, 1, 'SUTOYO', '2014-02-18 08:50:50', 0),
+(17, '081201094', 'SUTOYO', 2, 1, 'JULIUS LIMAN', '2014-02-18 08:50:50', 0),
+(18, '100801956', 'YUSEP SUTRESNA', 3, 1, '1', '2014-02-18 08:50:50', 0),
+(19, '130204874', 'RUDY RAKHMADI', 1, 1, '24', '2014-02-18 08:50:50', 0),
+(20, '091201580', 'ABDUL HAMID', 4, 1, 'RUDY RAKHMADI', '2014-02-18 08:50:50', 0),
+(21, '080800945', 'WILIAM MARDIAN ZAKARIA', 3, 1, '19', '2014-02-18 08:50:50', 0),
+(22, '080900974', 'BUDIARTO', 3, 4, 'RUDY RAKHMADI', '2014-02-18 08:50:50', 0),
+(23, '110502486', 'KENEDY', 0, 0, 'RUDY RAKHMADI', '2014-02-18 08:50:50', 0),
+(24, '', 'UTHAN MOKHAMAD ARIEF', 1, 1, '', '2014-02-18 08:52:44', 0),
+(26, '140205107', 'AREZA S. RAZAK', 0, 0, 'SUTOYO', '2014-02-18 13:49:59', 0),
+(27, '140205106', 'PARULIAN BUTAR BUTAR', 0, 0, 'HENDRA ENDIANDRA', '2014-02-18 14:05:40', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `isc_satuan`
+--
+
+CREATE TABLE IF NOT EXISTS `isc_satuan` (
+  `id_seq_satuan` int(11) NOT NULL AUTO_INCREMENT,
+  `name_satuan` varchar(50) NOT NULL,
+  `simbol_satuan` varchar(50) NOT NULL,
+  `description_satuan` varchar(250) NOT NULL,
+  `date_insert_satuan` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `del_satuan` tinyint(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id_seq_satuan`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `isc_satuan`
+--
+
+INSERT INTO `isc_satuan` (`id_seq_satuan`, `name_satuan`, `simbol_satuan`, `description_satuan`, `date_insert_satuan`, `del_satuan`) VALUES
+(1, 'RUPIAH', 'Rp', 'SATUAN DALAM RUPIAH', '2014-02-19 08:11:06', 0),
+(2, 'PERSENTASE', '%', 'SATUAN DALAM PERSENTASE', '2014-02-19 08:11:28', 0);
+
+ALTER TABLE  `labor_formulir_cp_raw_material` ADD  `qty` INT NOT NULL AFTER  `id_raw_material`;
+
+
+ALTER TABLE `user_role_access` ADD `add_rm_cp` ENUM('true','false') NOT NULL DEFAULT 'false' AFTER `print`;
+
+
+ALTER TABLE `labor_master_material_compound` ADD `price` DECIMAL(20,2) NOT NULL AFTER `category`, ADD `weight` FLOAT NOT NULL AFTER `price`, ADD `unit` VARCHAR(50) NOT NULL AFTER `weight`;
+
+
+INSERT INTO labor_master_material_compound (`idmaterial`, `name`, `category`, `price`, `weight`, `unit`) (select  itemname as `idmaterial`, itemname as name, 'Raw Material' as `category`, price,weight, 'Phr' as unit from v_new_raw_material)

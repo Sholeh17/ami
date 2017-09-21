@@ -1,0 +1,173 @@
+body, td, tr, div, span, p {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+	padding: 0px;
+	margin: 0px;
+	font-family: Arial, "MS Trebuchet", sans-serif;
+	text-align: left;
+}
+
+a img{
+border:none;
+}
+
+a {
+  border: none; 
+  text-decoration: none; 
+  color: black; 
+  font-size: 10pt;
+  vertical-align: center;
+}
+
+h1 {
+	font-size: 24pt;
+	margin: 0px;
+	padding: 0px;
+/*	padding-bottom: 5px;*/
+}
+
+h3 {
+  margin: 0px;
+  padding: 0px;
+  padding-top: 5px;
+}
+
+.header {
+	border-bottom: 1px solid black;  
+}
+
+h2 {
+	font-size: 12pt;
+	text-decoration: underline;
+}
+
+table{
+	margin: 0px;
+	padding: 0px;
+	font-size: 10pt;
+}
+
+tr {
+	vertical-align: bottom;
+	border: 1px solid #000;
+}
+
+th{
+	font-weight: bold;
+	text-align: left;
+	padding: 5px;
+}
+
+td{
+	text-align: left;
+	padding: 5px;
+}
+
+.border_all{
+	border: 1px solid #000;
+	border-bottom: none;
+	vertical-align: top;
+}
+
+.left{
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.left_top{
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	vertical-align: top;
+}
+
+.center{
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.center_top{
+	border-top: 1px solid #000;
+}
+
+.right{
+	border-right: 1px solid #000;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+.right_top{
+	border-right: 1px solid #000;
+	border-top: 1px solid #000;
+	vertical-align: top;
+}
+
+.left1{
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+}
+
+.center1{
+	border-top: 1px solid #000;
+}
+.right1{
+	border-right: 1px solid #000;
+	border-top: 1px solid #000;
+}
+
+.left2{
+	border-left: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.center2{
+	border-bottom: 1px solid #000;
+}
+.right2{
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+#nama_barang {
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#printPanel {
+  text-align: left; 
+  padding-right: 10px; 
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  background-color: #eeeeee;
+}
+
+#preview {
+  background: white;
+  width:100%;
+  margin:auto;
+}
+
+.table1 td {
+  border: 1px solid black;
+  text-align:center;
+}
+td{
+	vertical-align:top;
+}
+.div, .div td{
+	font-family:"Lucida Console"!important;
+	font-size:8pt!important;
+	text-transform:uppercase!important;
+}
+.bt {}
+.bt td{
+	border-top:1px solid #000000;
+}

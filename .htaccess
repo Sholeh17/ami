@@ -1,0 +1,10 @@
+RewriteEngine On
+
+##If installed in the public_html on linux, then add the users folder
+#eg: RewriteBase /~tahara/__my_ci_application__/biskitz/
+RewriteBase /ami/
+
+RewriteCond $1 !^(index\.php|themes|js|files)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]

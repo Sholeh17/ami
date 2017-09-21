@@ -1,0 +1,295 @@
+body {
+    font: normal 12px verdana,arial,tahoma;
+}
+
+a {
+	color: #306;
+}
+
+a:visited {
+   color: #EEE;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #F96;
+}
+
+
+#header {
+	
+   border:0 none;
+   background:url(../images/layout-browser-hd-bg.gif) repeat-x 0 0;
+   padding-top:3px;
+   padding-left:3px;
+    /**background: #7F99BE url(<?php echo base_url(); ?>assets/image/layout-browser-hd-bg.gif) repeat-x center;*/
+}
+
+
+#header .api-title {
+    font:normal 16px tahoma, arial, sans-serif;
+    color:white;
+    margin:5px;
+}
+
+
+
+
+.x-theme-neptune #header,
+.x-theme-access #header {
+    background: transparent;
+}
+
+#header h1 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: normal;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+.msg .x-box-mc {
+    font-size:14px;
+}
+#msg-div {
+    position:absolute;
+    left:50%;
+    top:10px;
+    width:400px;
+    margin-left:-200px;
+    z-index:20000;
+}
+#msg-div .msg {
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    background: #F6F6F6;
+    border: 2px solid #ccc;
+    margin-top: 2px;
+    padding: 10px 15px;
+    color: #555;
+}
+#msg-div .msg h3 {
+    margin: 0 0 8px;
+    font-weight: bold;
+    font-size: 15px;
+}
+#msg-div .msg p {
+    margin: 0;
+}
+.x-grid3-row-body p {
+    margin:5px 5px 10px 5px !important;
+}
+
+.my-label-style-bold {
+    font-weight: bold; 
+    border: 0px solid red;
+    text-align:left;
+}
+
+
+.btn-save {
+    background-image: url(../images/btn_icon/disk.png);
+}
+
+.btn-print {
+    background-image: url(../images/btn_icon/print.gif);
+}
+.view {
+   background-image: url(../images/btn_icon/gwenview.png);	
+}
+
+.btn_export {
+   background-image: url(../images/btn_icon/btn_export.png);	
+}
+
+.btn-delete {
+    background-image: url(../images/btn_icon/delete.png);
+}
+
+.btn-refresh {
+    background-image: url(../images/btn_icon/refresh.png);
+}
+
+.btn-update {
+    background-image: url(../images/btn_icon/disk.png);
+}
+
+.btn-add {
+    background-image: url(../images/btn_icon/add.gif);
+}
+
+.btn-edit {
+    background-image: url(../images/btn_icon/edit.png);
+}
+
+.btn-inventory {
+    background-image: url(../images/btn_icon/inventori.png);
+}
+
+.icon_company_profile {
+	background-image: url(../images/btn_icon/company_profile.png);
+}
+
+.icon_country {
+	background-image: url(../images/btn_icon/country.png);
+}
+
+.icon_branch{
+	background-image: url(../images/btn_icon/branch.png);
+}
+.icon_directorat{
+	background-image: url(../images/btn_icon/directorat.png);
+}
+
+.icon_list_bank {
+	background-image: url(../images/btn_icon/list_bank.png);
+}
+
+.icon_list_currency {
+	background-image: url(../images/btn_icon/list_currency.png);
+}
+
+.icon_budget{
+	background-image: url(../images/btn_icon/icon_budget.png);
+}
+
+.icon_journalacc {
+	background-image: url(../images/btn_icon/icon_journalacc.png);
+}
+
+.icon_leader_accounting {
+	background-image: url(../images/btn_icon/icon_leader_accounting.png);
+}
+
+.icon_closingdata {
+	background-image: url(../images/btn_icon/icon_closingdata.png);
+}
+
+.icon_found_master {
+	background-image: url(../images/btn_icon/icon_found_master.png);
+}
+
+.icon_list_accounting {
+	background-image: url(../images/btn_icon/icon_list_accounting.png);
+}
+
+.icon_create_ppd {
+	background-image: url(../images/btn_icon/icon_create_ppd.png);	
+}
+
+.icon_approve {
+	background-image: url(../images/btn_icon/icon_approve.png);	
+}
+
+.icon-save {
+	background-image: url(../images/btn_icon/save.png);	
+}
+
+.icon-reset {
+	background-image: url(../images/btn_icon/refresh.png);	
+}
+
+.icon-undo {
+	background-image: url(../images/btn_icon/undo.png);	
+}
+
+.icon-ok {
+	background-image: url(../images/btn_icon/icon_approve.png);	
+}
+
+.posting {
+	background-image: url(../images/btn_icon/mail-send-icon.png);	
+}
+
+.sys_reg {
+	background-image: url(../images/btn_icon/users-icon.png);	
+}
+
+.btn-login {
+	background-image: url(../images/btn_icon/btn-login.png);	
+}
+
+.sys_cp {
+	background-image: url(../images/btn_icon/btn-login.png);	
+}
+
+.icon_rejectdata {
+	background-image: url(../images/btn_icon/icon_closingdata.png);	
+}
+
+.icon_closingdata {
+	background-image: url(../images/btn_icon/btn-window-close.png);		
+}
+
+.icon_import {	
+	background-image: url(../images/btn_icon/icon_found_master.png);		
+}
+
+.filebtn {
+	background-image: url(../images/btn_icon/btn-download.png);		
+}
+
+.btn-sync_disk {
+	background-image: url(../images/btn_icon/btn-sync_disk.png);		
+}
+
+.layout_header {
+	background-image: url(../images/btn_icon/layout_header.png);		
+}
+
+.application_view_detail {
+	background-image: url(../images/btn_icon/application_view_detail.png);		
+}
+
+.new_po {
+	background-image: url(../images/btn_icon/purchase_order.png);		
+}
+
+.form_request_test {
+	background-image: url(../images/btn_icon/application_view_detail.png);
+}
+
+.karyawan {
+	background-image: url(../images/btn_icon/employee_tab.png);		
+}
+.list_test_request {
+	background-image: url(../images/btn_icon/sales_order.png);		
+}
+
+.input_report_test {
+	background-image: url(../images/btn_icon/sales_order.png);			
+}
+
+.report_graph {
+	background-image: url(../images/btn_icon/outputorder.png);			
+}
+
+.view_profitability {
+	background-image: url(../images/btn_icon/report.png);			
+}
+
+.view_waterfall {
+	background-image: url(../images/btn_icon/report.png);			
+}
+
+.roleusermanagement {
+	background-image: url(../images/btn_icon/tools.png);			
+}
+
+
+.m_sample {
+	background-image: url(../images/btn_icon/icon_found_master.png);			
+}
+
+.m_machine_detail {
+	background-image: url(../images/btn_icon/icon_found_master.png);			
+}
+
+.m_machine_field {
+	background-image: url(../images/btn_icon/icon_found_master.png);			
+}
+
+.m_toleransi  {
+	background-image: url(../images/btn_icon/icon_found_master.png);			
+}
